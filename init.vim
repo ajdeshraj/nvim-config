@@ -2,11 +2,16 @@ set nu
 set relativenumber
 set noerrorbells
 set scrolloff=10
+set tabstop=4
+set shiftwidth=4
+set expandtab
 set splitright
 set splitbelow
-set guicursor=
+set guicursor
+set autoindent
+set smartindent
 
-inoremap jh <Esc>
+inoremap jj <Esc>
 
 call plug#begin()
 	" LSP
@@ -18,10 +23,11 @@ call plug#begin()
 	Plug 'hrsh7th/nvim-cmp'
 	" Colorschemes
 	Plug 'dracula/vim', { 'as': 'dracula' }
+    Plug 'catppuccin/nvim', {'as': 'catppuccin'}
 	" Telescope
 	Plug 'nvim-lua/plenary.nvim'
 	Plug 'nvim-telescope/telescope.nvim'
 call plug#end()
 
-colorscheme dracula
+colorscheme catppuccin 
 syntax enable
