@@ -21,6 +21,7 @@ call plug#begin()
 	Plug 'hrsh7th/cmp-path'
 	Plug 'hrsh7th/cmp-cmdline'
 	Plug 'hrsh7th/nvim-cmp'
+    Plug 'mfussenegger/nvim-jdtls'
 	" Colorschemes
 	Plug 'dracula/vim', { 'as': 'dracula' }
     Plug 'catppuccin/nvim', {'as': 'catppuccin'}
