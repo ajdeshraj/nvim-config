@@ -7,7 +7,7 @@ set shiftwidth=4
 set expandtab
 set splitright
 set splitbelow
-set guicursor
+set guicursor=i:block
 set autoindent
 set smartindent
 
