@@ -13,6 +13,7 @@ set smartindent
 
 inoremap jj <Esc>
 
+" Plugins
 call plug#begin()
     " LSP
     Plug 'neovim/nvim-lspconfig'
@@ -30,6 +31,8 @@ call plug#begin()
     Plug 'nvim-telescope/telescope.nvim'
     " Beacon
     Plug 'danilamihailov/beacon.nvim'
+    " Cyclist(Listchars)
+    Plug 'tjdevries/cyclist.vim'
 call plug#end()
 
 " Beacon Customization
