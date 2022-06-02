@@ -33,6 +33,8 @@ call plug#begin()
     Plug 'danilamihailov/beacon.nvim'
     " Cyclist(Listchars)
     Plug 'tjdevries/cyclist.vim'
+    " Treesitter
+    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 call plug#end()
 
 " Beacon Customization
