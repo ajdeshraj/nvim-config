@@ -11,7 +11,7 @@ set guicursor=i:block
 set autoindent
 set smartindent
 
-inoremap jj <Esc>
+let mapleader = " "
 
 " Plugins
 call plug#begin()
@@ -23,6 +23,7 @@ call plug#begin()
     Plug 'hrsh7th/cmp-cmdline'
     Plug 'hrsh7th/nvim-cmp'
     Plug 'mfussenegger/nvim-jdtls'
+    Plug 'onsails/lspkind.nvim'
     " Colorschemes
     Plug 'dracula/vim', { 'as': 'dracula' }
     Plug 'catppuccin/nvim', {'as': 'catppuccin'}
@@ -35,6 +36,9 @@ call plug#begin()
     Plug 'tjdevries/cyclist.vim'
     " Treesitter
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+    Plug 'nvim-treesitter/nvim-treesitter-context'
+    " Harpoon
+    Plug 'ThePrimeagen/harpoon'
 call plug#end()
 
 " Beacon Customization
