@@ -52,7 +52,7 @@ local config = {
     '-configuration', '/home/arjun/LSP/jdt-language-server/config_linux/',
 
 
-    '-data', '/home/arjun/Java/workspace/'
+    '-data', '/home/arjun/code/java/workspace/'
 
   },
 
