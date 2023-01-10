@@ -6,6 +6,11 @@ lua << EOF
     local lspkind = require('lspkind')
 
     cmp.setup({
+        snipper = {
+            expand = function(args)
+            requre('luasnip').lsp_expand(args.body)
+            end,
+        },
         mapping = cmp.mapping.preset.insert({
           ['<C-b>'] = cmp.mapping(cmp.mapping.scroll_docs(-4), { 'i', 'c' }),
           ['<C-f>'] = cmp.mapping(cmp.mapping.scroll_docs(4), { 'i', 'c' }),
@@ -19,11 +24,8 @@ lua << EOF
         }),
         sources = cmp.config.sources({
           { name = 'nvim_lsp' },
-        }, 
-        {
+          { name = 'luasnip' },
           { name = 'buffer' },
-        },
-        {
           { name = 'path' },
         }),
         formatting = {
@@ -58,6 +60,7 @@ lua << EOF
     })
 
     local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+    capabilities.textDocument.completion.completionItem.snippetSupport = true
 
     -- Mappings.
     local opts = { noremap=true, silent=true }
@@ -94,7 +97,7 @@ lua << EOF
 
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
-local servers = { 'pyright', 'clangd', 'tsserver'}
+local servers = { 'pyright', 'clangd', 'tsserver', 'html'}
 for _, lsp in pairs(servers) do
   require('lspconfig')[lsp].setup {
     on_attach = on_attach,
@@ -105,4 +108,7 @@ for _, lsp in pairs(servers) do
     }
   }
 end
+
+require("luasnip.loaders.from_vscode").lazy_load()
+
 EOF

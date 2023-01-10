@@ -10,6 +10,7 @@ set splitbelow
 set guicursor=i:block
 set autoindent
 set smartindent
+set mouse=a
 
 let mapleader = " "
 
@@ -39,6 +40,10 @@ call plug#begin()
     Plug 'nvim-treesitter/nvim-treesitter-context'
     " Harpoon
     Plug 'ThePrimeagen/harpoon'
+    " LuaSnip
+    Plug 'L3MON4D3/LuaSnip'
+    Plug 'saadparwaiz1/cmp_luasnip'
+    Plug 'rafamadriz/friendly-snippets'
 call plug#end()
 
 " Beacon Customization
