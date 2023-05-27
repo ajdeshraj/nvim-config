@@ -28,6 +28,9 @@ call plug#begin()
     " Colorschemes
     Plug 'dracula/vim', { 'as': 'dracula' }
     Plug 'catppuccin/nvim', {'as': 'catppuccin'}
+    Plug 'EdenEast/nightfox.nvim'
+    Plug 'nyoom-engineering/oxocarbon.nvim', { 'as': 'oxocarbon'}
+    Plug 'bluz71/vim-moonfly-colors', { 'as': 'moonfly' }
     " Telescope
     Plug 'nvim-lua/plenary.nvim'
     Plug 'nvim-telescope/telescope.nvim'
@@ -49,5 +52,5 @@ call plug#end()
 " Beacon Customization
 let g:beacon_minimal_jump = 5
 
-colorscheme catppuccin 
+colorscheme moonfly
 syntax enable

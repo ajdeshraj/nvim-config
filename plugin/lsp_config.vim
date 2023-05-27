@@ -24,7 +24,7 @@ lua << EOF
         }),
         sources = cmp.config.sources({
           { name = 'nvim_lsp' },
-          { name = 'luasnip' },
+          --  { name = 'luasnip' },
           { name = 'buffer' },
           { name = 'path' },
         }),
@@ -109,6 +109,6 @@ for _, lsp in pairs(servers) do
   }
 end
 
-require("luasnip.loaders.from_vscode").lazy_load()
+-- require("luasnip.loaders.from_vscode").lazy_load()
 
 EOF
