@@ -47,7 +47,12 @@ call plug#begin()
     Plug 'L3MON4D3/LuaSnip'
     Plug 'saadparwaiz1/cmp_luasnip'
     Plug 'rafamadriz/friendly-snippets'
+    " Noice
+    Plug 'folke/noice.nvim'
+    Plug 'MunifTanjim/nui.nvim'
 call plug#end()
+
+lua require("noice").setup()
 
 " Beacon Customization
 let g:beacon_minimal_jump = 5
