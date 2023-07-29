@@ -50,6 +50,8 @@ call plug#begin()
     " Noice
     Plug 'folke/noice.nvim'
     Plug 'MunifTanjim/nui.nvim'
+    " Cellular Automaton
+    Plug 'eandrju/cellular-automaton.nvim'
 call plug#end()
 
 lua require("noice").setup()
