@@ -25,6 +25,7 @@ call plug#begin()
     Plug 'hrsh7th/nvim-cmp'
     Plug 'mfussenegger/nvim-jdtls'
     Plug 'onsails/lspkind.nvim'
+    Plug 'williamboman/mason.nvim'
     " Colorschemes
     Plug 'dracula/vim', { 'as': 'dracula' }
     Plug 'catppuccin/nvim', {'as': 'catppuccin'}
@@ -55,6 +56,7 @@ call plug#begin()
 call plug#end()
 
 lua require("noice").setup()
+lua require("mason").setup()
 
 " Beacon Customization
 let g:beacon_minimal_jump = 5
